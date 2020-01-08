@@ -1,0 +1,116 @@
+Ex1.
+var i = 0;
+function myfunc ( num1, num2) {
+   var result = [];
+  for ( i == 0; i < num1.length; i++ ) {
+    switch ( num1[i] <= num2) {
+      case true:
+      continue;
+      default:
+      result.push( num1[i]);
+      }
+  }if(result.length ==0) {
+    return "Such values do not exist"
+  }else {
+  return result;
+  }
+}
+  console.log( myfunc([10, 25, 16, -5, 30, 15, 24] , 16))//[1, 1, 2, -3, 0, 8, 4, 0], 9
+Ex2.
+function evennumbers ( first, last ) {
+  var result = "";
+  for ( i = first; i <= last; i++ ) {
+   if ( i % 2 == 1 || ((i - ( i % 10 )) / 10) % 2 == 1 || (( i - (i % 100)) / 100 ) % 2 == 1) {
+     if ( i >= last ) {
+       result = "Such velues doesn't exist"
+     } else {
+       continue;
+     }
+   } else {
+     result +=  i  + ", " ;
+   }
+  }
+      return result;
+}
+console.log( evennumbers( 19, 42 )) // 99,199
+
+Ex3.
+var number1 = 4211133;
+var number2 = 7791;
+var number3 = 5;
+function oddornot ( num ) {
+  if (num % 2 === 0 ) {
+    return "false";
+  }
+  else {
+    if ( num - (num % 10) !== 0){
+      return oddornot ( (num - (num % 10)) / 10 )
+    }
+    else {
+    return " true "
+  }
+  }   
+}
+console.log( oddornot(number1) );
+console.log( oddornot(number2) );
+console.log( oddornot(number3) );
+
+
+Ex.4
+var arr1 = [56, -9, 87, -23, 0, -105, 55, 1];
+var arr2 = [45, -9, 15, 5, -78];
+var arr3 = [-5, -9, -111, -1000, -7];
+var result = Infinity;
+function minpos ( arr ) {
+  if (arr.length === 0) {
+     if (result === Infinity) {
+       return -1;
+     }
+       return result
+  } else {
+        if (arr[0] >= 0 && arr[0] < result) {
+            result = arr[0];
+        }
+        arr.shift();
+        return minpos(arr);
+
+    }
+}
+console.log(minpos(arr1));
+
+
+Ex5.
+var arr1 = [2, 12, 15, 48, 64];
+var arr2 = [-9, -4, -4, 3, 12, 4, 5];
+
+function index( arr ) {
+  result = null;
+  for( i = 0; i < arr.length; i++ ) {
+    if( arr[i] > arr[i+1]) {
+    result = i + 1;
+    }
+  }
+  if( result === null) {
+    return -1;
+  }
+  return result;
+}
+console.log( index(arr1));
+
+
+Ex. Gcapatker.
+ var n = 15;
+ var a = "";
+ for(var i = 1; i <= n; i++) {
+   a = "";
+   for (var j = 1; j <= n; j++) {
+     if ( j == 1 || j == n || i == 1 || ( j + i) == ( n + 1 ) || i == n || i == j ) {
+       a += "*";
+     } else {
+a += " ";
+}
+   } console.log (a);
+ }
+
+
+
